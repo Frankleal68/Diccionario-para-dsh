@@ -1,0 +1,57 @@
+{
+  "name": "dsh-diccionario",
+  "version": "0.1.0",
+  "description": "Corrector ortografico para el campo de escritura de DSH: diccionario propio editable, palabras aprendidas y franja de sugerencias.",
+  "license": "MIT",
+  "author": "Frankleal68 (https://github.com/Frankleal68)",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "dsh-plugin",
+    "spellcheck",
+    "ortografia",
+    "espanol",
+    "diccionario"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frankleal68/Diccionario-para-dsh.git"
+  },
+  "homepage": "https://github.com/Frankleal68/Diccionario-para-dsh#readme",
+  "bugs": {
+    "url": "https://github.com/Frankleal68/Diccionario-para-dsh/issues"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./client/bundle.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "dependencies": {
+    "dictionary-es": "^4.0.0",
+    "nspell": "^2.1.5"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/index.js && node --check src/engine.js && node --check client/bundle.js"
+  },
+  "files": [
+    "src",
+    "client",
+    "datos",
+    "cordis.patch.yml",
+    "README.md"
+  ]
+}

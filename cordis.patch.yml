@@ -1,0 +1,5 @@
+# dsh-diccionario: aporta su fila a la composicion del perfil cuando el
+# paquete esta instalado (dsh plugin --profile web add ...).
+- insert:
+    - id: diccionario
+      name: 'dsh-diccionario'
